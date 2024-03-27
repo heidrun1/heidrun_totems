@@ -22,8 +22,15 @@ AddEventHandler('esx:playerLoaded', function(xPlayer)
     TriggerClientEvent('heidrun_totems:checkTotems', source)
 end)
 
-RegisterNetEvent('esx:addInventoryItem')
-AddEventHandler('esx:addInventoryItem', function(item)
+RegisterNetEvent('esx:giveInventoryItem')
+AddEventHandler('esx:giveInventoryItem', function(item)
+    if Config.Totems[item] then 
+        TriggerClientEvent('heidrun_totems:checkTotems', source)
+    end
+end)
+
+RegisterNetEvent('esx:gitestveInventoryItem')
+AddEventHandler('esx:gitestveInventoryItem', function(item)
     if Config.Totems[item] then 
         TriggerClientEvent('heidrun_totems:checkTotems', source)
     end
