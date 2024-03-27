@@ -1,7 +1,7 @@
 Config = {}
 
 Config.Totems = {
-    -- Defines a new totem with a unique key. In this example, the key is "example_item".
+    -- Defines a new totem item. In this example, the item name is "example_item".
     ["example_item"] = {
         -- Defines the interval in milliseconds between each effect activation.
         interval = 2000,
