@@ -4,17 +4,6 @@ local inProgress = false
 
 -- Events
 
-RegisterNetEvent('esx:playerLoaded')
-AddEventHandler('esx:playerLoaded', function(xPlayer)
-	ESX.TriggerServerCallback("heidrun_totems:checkTotems", function(cb)
-		availableTotems = cb
-		inProgress = false
-		Citizen.Wait(1000)
-		RemoveTotems()
-		TotemFunction()
-	end)
-end)
-
 RegisterNetEvent("heidrun_totems:checkTotems")
 AddEventHandler("heidrun_totems:checkTotems", function()
 	ESX.TriggerServerCallback("heidrun_totems:checkTotems", function(cb)
